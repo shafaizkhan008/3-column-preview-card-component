@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    /* (paragraphs) */
+    --Very-light-gray : hsl(0, 0%, 95%)
+    /* (background, headings, buttons) */
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw; 
+    height: 100vh;
+    background-color: var(--Very-light-gray);
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    /* width: 500px; */
+}
+ 
+.one{
+    background-color: var(--Bright-orange);
+    padding: 0 20px;
+}
+
+.two{
+    background-color: var(--Dark-cyan);
+    padding: 0 20px;
+}
+
+.three{
+    background-color: var(--Very-dark-cyan);
+    padding: 0 20px;
+}
+
+.one img, .two img, .three img{
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.one p , .two p, .three p{
+    color: var(--Transparent-white);
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    padding: 20px;
+}
+
+.one h1 , .two h1, .three h1{
+    color: var(--Transparent-white);
+    font-family: 'Big Shoulders Display';
+    letter-spacing: 2px;
+    font-weight: 700;
+    /* margin: 20px 0; */
+    padding: 20px;
+}
+
+.button {
+    align-items: center;
+    background-color: var(--Very-light-gray);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    height: 40px;
+    min-width: 140px;
+    padding: 0 17px;
+    margin: 60px;
+    font-weight: 400;
+}
+.one .button{
+    color: var(--Bright-orange);
+}
+.two .button{
+    color: var(--Dark-cyan);
+}
+.three .button{
+    color: var(--Very-dark-cyan);
+}
+
+@media (max-width:700px){
+    .main{
+        width: 100%;
+        height:auto
+    }
+    .cards{
+        flex-direction: column;
+        margin: 20px 0;
+    }
+}
